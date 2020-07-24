@@ -1,0 +1,10 @@
+<h3>Heroes</h3>
+
+<ul class="heroes">
+    <li *ngFor="let hero of heroes">
+        <a (click)="edit(hero)">
+            <span class="badge">{{ hero.id || -1 }}</span>
+            <span *ngIf="hero !== editHero">{{ hero.name }}</span>
+        </a>
+    </li>
+</ul>

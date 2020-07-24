@@ -4,7 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpErrorHandler } from './http-error-handler.service';
 import { InMemoryDataService } from './in-memory-data.service';
+import { MessageService } from './messages/message.service';
 import { NgModule } from '@angular/core';
 
 @NgModule({
@@ -19,7 +21,7 @@ import { NgModule } from '@angular/core';
             put204: false,
         }),
     ],
-    providers: [],
+    providers: [HttpErrorHandler, MessageService],
     bootstrap: [AppComponent],
 })
 export class AppModule {}
