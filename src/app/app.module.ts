@@ -6,11 +6,12 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpErrorHandler } from './http-error-handler.service';
 import { InMemoryDataService } from './in-memory-data.service';
+import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './messages/message.service';
 import { NgModule } from '@angular/core';
 
 @NgModule({
-    declarations: [AppComponent, HeroesComponent],
+    declarations: [AppComponent, HeroesComponent, MessagesComponent],
     imports: [
         BrowserModule,
         FormsModule,
